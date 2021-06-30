@@ -1,0 +1,32 @@
+{
+  "name": "backend-dw2",
+  "version": "1.0.0",
+  "description": "server side",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exodojaffar/backend-dw2.git"
+  },
+  "keywords": [
+    "backend",
+    "postgresql",
+    "restapi"
+  ],
+  "author": "Exodo Jaffar",
+  "license": "SEE LICENSE IN LICESNSE",
+  "bugs": {
+    "url": "https://github.com/exodojaffar/backend-dw2/issues"
+  },
+  "homepage": "https://github.com/exodojaffar/backend-dw2#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
+  }
+}
