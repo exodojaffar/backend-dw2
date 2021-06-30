@@ -11,11 +11,17 @@ const client = new Client({
 client.connect();
 
 function saveDataOfContato({nome, email, msg}) {
-	// client.connect();
-
-	client.query(`INSERT INTO contato VALUES('${nome}', '${email}', '${msg}');`)
-
-	// client.end();
+	return new Promise((resolve, reject) => {
+	    setTimeout(() => {
+	        client.query(`INSERT INTO contato VALUES('${nome}', '${email}', '${msg}');`, (err, res) => {
+	            if (err) {
+	                reject(err)
+	            } else {
+	                resolve(true)
+	            }
+	        })
+	    }, 0)
+	})
 }
 
 // client.query('SELECT * FROM contato;', (err, res) => {
