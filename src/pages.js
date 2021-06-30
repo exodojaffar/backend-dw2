@@ -8,12 +8,12 @@ function saveForm(req, res) {
 		(email == undefined)||
 		(msg == undefined)
 	){
-		return res.status(418).json(JSON.stringify({"error":"Falta um campo ae"}))
+		return res.status(418).json({"ok":false, "error":"Falta um campo ae"})
 	}
 
 	db.saveDataOfContato({nome, email, msg})	
 
-	return res.status(200)
+	return res.status(200).json({"ok": true})
 }
 
 module.exports = {
