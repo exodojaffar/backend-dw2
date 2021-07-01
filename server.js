@@ -5,7 +5,8 @@ var cors = require('cors')
 var app = express()
 
 const {
-	saveForm
+	saveForm,
+	showData
 } = require('./src/pages.js')
 
 app
@@ -16,6 +17,10 @@ app
 
 // Rotas da aplicação
 .post("/save", saveForm)
+.get("/show", showData)
+.get("/", (req, res) => {
+	res.send("<h1>Pagina Errada</h1>")
+})
 
 // start do servidor
 .listen(process.env.PORT || 3000)
