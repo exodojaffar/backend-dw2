@@ -24,14 +24,10 @@ function saveDataOfContato({nome, email, msg}) {
 	})
 }
 
-// client.query('SELECT * FROM contato;', (err, res) => {
-// 	if (err) throw err;
+function getRowFrom(table, callback) {
+	client.query('SELECT * FROM contato;', callback);	
+}
 
-// 	for (let row of res.rows) {
-// 	 console.log(JSON.stringify(row));
-// 	}
 
-// 	client.end();
-// });
 
-module.exports = {saveDataOfContato};
+module.exports = {saveDataOfContato, getRowFrom};
