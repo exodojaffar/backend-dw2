@@ -25,7 +25,7 @@ function saveDataOfContato({nome, email, msg}) {
 }
 
 function getRowFrom(table, callback) {
-	client.query('SELECT * FROM contato;', callback);	
+	client.query(`SELECT * FROM ${table};`, callback);	
 }
 
 
