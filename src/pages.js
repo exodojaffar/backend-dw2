@@ -25,7 +25,7 @@ function saveForm(req, res) {
     subject:`${name}, olá e bem-vindo! Hello there and `,
     text:`${nome},\n\nPt-BR: Nós do projeto só podemos agradecer, seu interesse demonstra que estamos indo pelo caminho certo e isso nos deixa muito agradecido, obrigado!\n\n En-USA: we from the project are very thankful, you're interested show to us that we are going to the correct way, thank you! \n\nASS: João Lucas & Êxodo Jaffar.`
   }
-  email_sender(emailToSend, (err)=>{
+  transporter.sendMail(emailToSend, (err)=>{
     if(err){
       console.log(err);
     }else{
