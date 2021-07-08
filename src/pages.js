@@ -55,7 +55,7 @@ function showData(req, res) {
     if (err) throw err;
 
     for (let row of res.rows) {
-      addRowOnTable(row)      
+      addRowOnTable(row)
     }
 
     endComposition()
